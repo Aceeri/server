@@ -4,7 +4,7 @@ use server::config::{get_config, ServerConfig};
 use actix_web::{get, App, HttpServer, Responder};
 
 #[get("/")]
-async fn index(info: actix_web::web::Path<(u32, String)>) -> impl Responder {
+async fn index(info: actix_web::web::Path<()>) -> impl Responder {
     "aeuae"
 }
 
