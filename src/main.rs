@@ -1,8 +1,18 @@
 
 use server::config::{get_config, ServerConfig};
-use server::cat::{random_cat};
+use server::cat::{random_cat, cat};
 
 use actix_web::{get, App, HttpServer, Responder};
+
+//#[get("/cat/")]
+//async fn index(info: actix_web::web::Path<()>) -> impl Responder {
+    //random_cat()
+//}
+
+//#[get("/cat/{name}")]
+//async fn index(info: actix_web::web::Path<(String,)>) -> impl Responder {
+    //cat(info.0)
+//}
 
 #[get("/")]
 async fn index(info: actix_web::web::Path<()>) -> impl Responder {

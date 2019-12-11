@@ -1,4 +1,6 @@
 #/bin/sh
+set -e
+
 rev="$(git log -1 --date=format:%F-%H%M --pretty=format:'%cd-%h')"
 image=gcr.io/aceeri/webserver
 full_image=$image:$rev

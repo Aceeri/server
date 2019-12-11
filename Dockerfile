@@ -4,14 +4,14 @@ COPY src/ src/
 COPY Cargo.toml Cargo.toml
 COPY Cargo.lock Cargo.lock
 
-RUN cargo build --release
+RUN cargo build
 
 RUN mkdir -p /build/
-RUN cp -r ./target/release/server /build/
+RUN cp -r ./target/debug/server /build/
 
 FROM debian:buster AS release
 
-RUN apt-get update \
+RUN apt-get update && \
     apt-get install -y \
         curl \
         vim
