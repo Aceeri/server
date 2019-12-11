@@ -1,11 +1,12 @@
 
 use server::config::{get_config, ServerConfig};
+use server::cat::{random_cat};
 
 use actix_web::{get, App, HttpServer, Responder};
 
 #[get("/")]
 async fn index(info: actix_web::web::Path<()>) -> impl Responder {
-    "aeuae"
+    random_cat()
 }
 
 #[actix_rt::main]

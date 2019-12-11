@@ -13,6 +13,7 @@ actix-connect = "1.0.0-alpha.3"
 serde = "1.0.103"
 serde_yaml = "0.8.11"
 config = "0.9"
+rand = "0.7.2"
 
 [profile.release]
 lto = true
