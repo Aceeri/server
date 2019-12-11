@@ -9,5 +9,6 @@ RUN cp -r ./target/release/server /build/
 FROM debian:buster
 
 COPY --from=build /build /
+RUN touch /etc/server_config.yaml
 
 CMD ["/server"]
