@@ -1,0 +1,20 @@
+[package]
+name = "server"
+version = "0.1.0"
+authors = ["Aceeri <conmcclusk@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+actix-web = "2.0.0-alpha.4"
+actix-rt = "1.0.0-alpha.3"
+actix-tls = { version = "1.0.0-alpha.3" }
+actix-http = "1.0.0-alpha.4"
+actix-connect = "1.0.0-alpha.3"
+serde = "1.0.103"
+serde_yaml = "0.8.11"
+config = "0.9"
+
+[profile.release]
+lto = true
+opt-level = 3
+codegen-units = 1
